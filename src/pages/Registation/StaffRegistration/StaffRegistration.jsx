@@ -20,7 +20,7 @@ const StaffRegistration = () => {
     event.preventDefault();
     if (validateForm()) {
       const postData = { ...Post, Status: true };
-      axios.post('http://31.172.83.7:3000/postStaff', postData)
+      axios.post('https://srv496943145.host.ultaserver.net/postStaff', postData)
         .then(response => {
           console.log(response);
           setSubmitStatus('success');

@@ -19,55 +19,55 @@ const Home = () => {
 
     useEffect(() => {
         setLoading(true);
-        axios.get("http://31.172.83.7:3000/getnewoccuranceAllStatusWithZeroAndTwo")
+        axios.get("https://srv496943145.host.ultaserver.net/getnewoccuranceAllStatusWithZeroAndTwo")
             .then((response) => {
                 let data = response.data
                 // console.log(data.length)
                 setoccurenceInCareLength(data.length)
         })
-        axios.get("http://31.172.83.7:3000/getnewoccuranceOpenCases")
+        axios.get("https://srv496943145.host.ultaserver.net/getnewoccuranceOpenCases")
             .then((response) => {
                 let data = response.data
                 // console.log(data.length)
                 setopenCasesLength(data.length)
         })
-        axios.get("http://31.172.83.7:3000/getAllStaff")
+        axios.get("https://srv496943145.host.ultaserver.net/getAllStaff")
             .then((response) => {
                 let data = response.data
                 // console.log(data.length)
                 setStaffRegistrationsLength(data.length)
         })
-        axios.get("http://31.172.83.7:3000/getVehcle")
+        axios.get("https://srv496943145.host.ultaserver.net/getVehcle")
             .then((response) => {
                 let data = response.data
                 // console.log(data.length)
                 setvehicleRegistrationsLength(data.length)
         })
-        axios.get("http://31.172.83.7:3000/getGarrisonTrue")
+        axios.get("https://srv496943145.host.ultaserver.net/getGarrisonTrue")
             .then((response) => {
                 let data = response.data
                 // console.log(data.length)
                 setguAvailableLength(data.length)
         })
-        axios.get("http://31.172.83.7:3000/getGarrisonFalse")
+        axios.get("https://srv496943145.host.ultaserver.net/getGarrisonFalse")
             .then((response) => {
                 let data = response.data
                 // console.log(data.length)
                 setguNotAvailableLength(data.length)
         })
-        axios.get("http://31.172.83.7:3000/occurrences/today")
+        axios.get("https://srv496943145.host.ultaserver.net/occurrences/today")
             .then((response) => {
                 let data = response.data.count
                 // console.log("today total occuenrences : " , data)
                 settodayOccurencesLength(data)
         })
-        axios.get("http://31.172.83.7:3000/occurrences/month")
+        axios.get("https://srv496943145.host.ultaserver.net/occurrences/month")
             .then((response) => {
                 let data = response.data.count
                 // console.log(data.length)
                 setMonthOccurencesLength(data)
         })
-        axios.get("http://31.172.83.7:3000/occurrences/year")
+        axios.get("https://srv496943145.host.ultaserver.net/occurrences/year")
             .then((response) => {
                 let data = response.data.count
                 // console.log(data.length)

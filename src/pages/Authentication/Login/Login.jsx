@@ -59,7 +59,7 @@ const Login = ({ onLoginSuccess }) => {
     console.log("admin called", e.target.name);
     if (validation()) {
       axios
-        .post("http://31.172.83.7:3000/userLogin", { username, password, isAdmin: e.target.name === 'admin' })
+        .post("https://srv496943145.host.ultaserver.net/userLogin", { username, password, isAdmin: e.target.name === 'admin' })
         .then((res) => {
           if (res.data.user) {
             setSnackbarMessage("Login successful");
